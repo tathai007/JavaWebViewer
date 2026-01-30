@@ -1,2 +1,68 @@
-# JavaWebViewer
-Java Web Viewer is a lightweight Java app that lets you embed a local HTML file or a web URL inside a Java-based window. It includes configurable options that can be easily set via command-line arguments or scripts, making it flexible for tasks like kiosk displays or simple web app distribution.
+# Java Web Viewer (viewer.jar)
+
+Portable Java WebView app for local HTML files and web pages via http / https with useful window customization
+
+Quick Start
+-----------
+java --module-path javafx --add-modules javafx.controls,javafx.web -jar viewer.jar
+
+Opens index.htm from current directory (1200x800 window)
+
+Command Line Arguments
+----------------------
+viewer.jar "[url]" "[title]" [width] [height] [fullscreen] [maximized] [resizable] [alwaysontop] [x] [y]
+
+1: url              (URL/path)        Default: index.htm
+2: title            (string)          Default: "Local HTML Viewer"  
+3: width            (px/auto)         Default: 1200
+4: height           (px/auto)         Default: 800
+5: fullscreen       (true/false)      Default: false
+6: maximized        (true/false)      Default: false
+7: resizable        (true/false)      Default: true
+8: alwaysontop      (true/false)      Default: false
+9: x                (px/center)       Default: center
+10:y                (px/center)       Default: center
+
+Usage Examples
+--------------
+Basic:
+viewer.jar "folder/index.html" "My WebApp"
+
+Kiosk Mode:
+viewer.jar "kiosk/dashboard.html" "Dashboard" true true false
+
+Fixed Debug Window:
+viewer.jar "logs/debug.html" "Live Logs" 400 300 false false false true true 10 10
+
+Distribution Bundle
+-------------------
+JavaWebViewer.zip
+├── viewer.jar
+├── index.htm
+├── javafx/
+├── Launch.bat
+└── Launch-FullScreen.bat
+
+Launch.bat:
+@echo off
+java --module-path lib --add-modules javafx.controls,javafx.web -jar viewer.jar "index.htm" "Java WebApp" 1200 760 true
+
+Requirements
+------------
+Java: 21+ (Temurin recommended)
+JavaFX: 21+ (included)
+OS: Windows 10/11, macOS, Linux
+
+Note: this has only yet been tested on Windows so far, it may need additional libraries for Linux and MacOS but i'll look into that in the future.
+
+File Paths
+----------
+Windows: C:/Users/You/site/index.htm
+Linux:   /home/user/site/index.htm  
+Relative: index.htm
+
+Build from Source
+-----------------
+javac --add-modules javafx.controls,javafx.web --module-path javafx-sdk-21/lib LocalViewer.java
+
+jar cfe viewer.jar LocalViewer *.class
