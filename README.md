@@ -39,16 +39,16 @@ Another example:
 
 Usage Examples
 --------------
-Basic:
+**Basic:**<br>
 viewer.jar "folder/index.html" "My WebApp"
 
-Basic with icon:
+**Basic with icon:**<br>
 viewer.jar "folder/index.html" "My WebApp" auto auto false false false center center icon.png
 
-Kiosk Mode:
+**Kiosk Mode:**<br>
 viewer.jar "kiosk/dashboard.html" "Dashboard" true true false
 
-Fixed Debug Window:
+**Fixed Debug Window:**<br>
 viewer.jar "logs/debug.html" "Live Logs" 400 300 false false false true true 10 10
 
 Console Feedback 
@@ -71,14 +71,16 @@ Distribution Bundle
 JavaWebViewer.zip<br>
 ├── viewer.jar<br>
 ├── index.htm<br>
-├── javafx/<br>
+├── lib/<br>
+├── bin/<br>
 ├── Launch.bat<br>
 ├── icon.png<br>
 └── Launch-FullScreen.bat
 
 Launch.bat:
-@echo off
-java --module-path lib --add-modules javafx.controls,javafx.web -jar viewer.jar index.htm --title="Java WebApp" --width=1200 --height=760 false flase --icon=icon.png
+
+    @echo off
+    java --module-path lib --add-modules javafx.controls,javafx.web -jar viewer.jar index.htm --title="Java WebApp" --width=1200 --height=760 false flase --icon=icon.png
 
 Requirements
 ------------
@@ -96,6 +98,6 @@ Relative: index.htm
 
 Build from Source
 -----------------
-javac --add-modules javafx.controls,javafx.web --module-path javafx-sdk-21/lib LocalViewer.java
 
-jar cfe viewer.jar LocalViewer *.class
+    javac --add-modules javafx.controls,javafx.web --module-path javafx-sdk-21/lib LocalViewer.java
+    jar cfe viewer.jar LocalViewer *.class
